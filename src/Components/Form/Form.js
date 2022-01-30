@@ -1,6 +1,8 @@
 import React from "react";
 
-import { Form as FormStyles } from "./Form.styles";
+import { Form as StyledForm } from "./Form.styles";
 
-const Form = ({ children }) => <FormStyles>{children}</FormStyles>;
+const Form = ({ children, submitHandler }) => (
+  <StyledForm onSubmit={submitHandler}>{children}</StyledForm>
+);
 export default Form;
